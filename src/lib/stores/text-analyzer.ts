@@ -5,19 +5,19 @@ class TextAnalyzerStore {
 	text = writable('')
 	shouldExcludeSpaces = writable(false)
 
-	characters = derived([this.text, this.shouldExcludeSpaces], ([$text, $shouldExludeSpaces]) => {
+	characters = derived([this.text, this.shouldExcludeSpaces], ([$text, $shouldExcludeSpaces]) => {
 		let normalized = $text
-		if ($shouldExludeSpaces) {
+		if ($shouldExcludeSpaces) {
 			normalized = $text.replace(/\s+/g, '')
 		}
 		return normalized.length
 	})
 	words = derived(this.text, ($text) => {
-		const normalized = $text.split(/\b[a-zA-Z]+\b/g)
-		return normalized.length - 1
+		const normalized = $text.match(/\b[a-zA-Z]+\b/g)
+		return normalized ? normalized.length : 0
 	})
 
-	sentencies = derived(this.text, ($text) => {
+	sentences = derived(this.text, ($text) => {
 		const normalized = $text.match(/[^.!?]+[.!?]+/g) || []
 		return normalized.length
 	})

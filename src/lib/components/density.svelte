@@ -17,7 +17,7 @@
 {/snippet}
 
 <section>
-	<h3 class="text-preset-2">Letter Density</h3>
+	<h2 class="text-preset-2">Letter Density</h2>
 
 	<div class="mt-5 space-y-3">
 		{#if $lettersMapped.length}

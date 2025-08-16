@@ -8,19 +8,18 @@
 
 <header>
 	<div class="mt-5 flex items-center justify-between lg:mt-8">
-		<div class="flex items-center gap-3">
+		<figure class="flex items-center gap-3">
 			<img src={Logo} alt="Charater counter logo" />
-			<h2 class="text-preset-2">Character Counter</h2>
-		</div>
+			<figcaption class="text-preset-2">Character Counter</figcaption>
+		</figure>
 
 		<button
+			type="button"
 			onclick={() => theme.toggle()}
 			class="grid size-11 cursor-pointer place-content-center rounded-lg bg-neutral-100 dark:bg-neutral-700"
 		>
 			{#key $theme}
-				<div in:fade={{ duration: 200 }}>
-					<img src={$theme === 'dark' ? Sun : Moon} alt="Theme icon" />
-				</div>
+				<img src={$theme === 'dark' ? Sun : Moon} alt="Theme icon" in:fade={{ duration: 200 }} />
 			{/key}
 		</button>
 	</div>

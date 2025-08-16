@@ -43,7 +43,7 @@
 
 	<div class="flex flex-col justify-between gap-3 md:h-8 md:flex-row md:items-center">
 		<div class="flex flex-col gap-x-6 gap-y-3 md:flex-row">
-			<Checkbox name="exclude-spaces" checked={$shouldExcludeSpaces}>Exclude Spaces</Checkbox>
+			<Checkbox name="exclude-spaces" bind:checked={$shouldExcludeSpaces}>Exclude Spaces</Checkbox>
 
 			<Checkbox name="has-limit" bind:checked={hasLimit}>Set Character Limit</Checkbox>
 
@@ -54,6 +54,8 @@
 					id="limit"
 					bind:value={limit}
 					class="w-[6ch] rounded-md border-[1.5px] border-neutral-600 px-3 py-1"
+					in:fly={{ x: -10, duration: 300 }}
+					out:fly={{ x: 10, duration: 200 }}
 				/>
 			{/if}
 		</div>

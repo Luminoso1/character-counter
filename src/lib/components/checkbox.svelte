@@ -9,7 +9,7 @@
 	let { children, checked = $bindable(), class: CLASS, ...rest }: Props = $props()
 </script>
 
-<label for={rest.name} class="flex cursor-pointer items-center gap-2 select-none">
+<label class="flex cursor-pointer items-center gap-2 select-none">
 	<input
 		id={rest.name}
 		type="checkbox"
