@@ -4,11 +4,11 @@
 	import { analyzer } from '../stores/text-analyzer'
 	import Checkbox from './checkbox.svelte'
 
-	const { text, words, shouldExcludeSpaces } = analyzer
+	const { text, characters, words, shouldExcludeSpaces } = analyzer
 
 	let limit = $state(300)
 	let hasLimit = $state(false)
-	let error = $derived(hasLimit && $text.length >= limit)
+	let error = $derived(hasLimit && $characters >= limit)
 
 	let time = $derived.by(() => {
 		let speed = 200 // words per minute

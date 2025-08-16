@@ -1,6 +1,6 @@
 # Character Counter
 
-This is a solution to the [Frontend Mentor](https://www.frontendmentor.io/) challenge that involves building a responsive and accessible character counter application. The goal is to match the provided design and implement the required functionality using modern frontend tools.
+This is a solution to the [Frontend Mentor](https://www.frontendmentor.io/challenges/character-counter-znSgeWs_i6) challenge that involves building a responsive and accessible character counter application. The goal is to match the provided design and implement the required functionality using modern frontend tools.
 
 ## 🚀 Features
 
@@ -24,7 +24,7 @@ To get this project running locally:
 
 ```bash
 # Clone the repo
-git clone https://github.com/notwater1/character-counter.git
+git clone https://github.com/Luminoso1/character-counter.git
 
 # Enter the directory
 cd character-counter
