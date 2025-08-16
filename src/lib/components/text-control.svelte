@@ -9,7 +9,6 @@
 	let limit = $state(300)
 	let hasLimit = $state(false)
 	let error = $derived(hasLimit && $characters >= limit)
-
 	let time = $derived.by(() => {
 		let speed = 200 // words per minute
 		return ($words / speed).toFixed(1)
@@ -27,7 +26,7 @@
 		bind:value={
 			() => $text,
 			(v) => {
-				$text = hasLimit && v.length > limit ? v.slice(0, limit) : v
+				$text = error ? v.slice(0, limit + (v.length - 1 - $characters)) : v
 			}
 		}
 	></textarea>
